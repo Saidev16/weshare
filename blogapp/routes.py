@@ -120,8 +120,7 @@ def new_post():
 @app.route('/academic')
 def academic():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'Academic').paginate(page=page, per_page=7) 
-    
+    posts = Post.query.filter_by(category='Academic').order_by(Post.date_posted.desc()).paginate(page=page, per_page=7) 
     return  render_template('home.html' , posts = posts , category = 'academic')
 
 
@@ -143,7 +142,7 @@ def academicpost():
 @app.route('/technology')
 def technology():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'technology').paginate(page=page, per_page=7)
+    posts = Post.query.filter_by(category='Academic').order_by(Post.date_posted.desc()).paginate(page=page, per_page=7)
     return  render_template('home.html' , posts = posts)
 
 
@@ -164,7 +163,7 @@ def technologypost():
 @app.route('/sport')
 def sport():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'sport').paginate(page=page, per_page=7)
+    posts = Post.query.filter_by(category='Academic').order_by(Post.date_posted.desc()).paginate(page=page, per_page=7)
     return  render_template('home.html' , posts = posts)
 
 
@@ -186,7 +185,7 @@ def sportpost():
 @app.route('/travel')
 def travel():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'travel').paginate(page=page, per_page=7)
+    posts = Post.query.filter_by(category='Academic').order_by(Post.date_posted.desc()).paginate(page=page, per_page=7)
     return  render_template('home.html' , posts = posts)
 
 
@@ -207,7 +206,7 @@ def travelpost():
 @app.route('/gaming')
 def gaming():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'gaming').paginate(page=page, per_page=7)
+    posts = Post.query.filter_by(category='Academic').order_by(Post.date_posted.desc()).paginate(page=page, per_page=7)
     return  render_template('home.html' , posts = posts)
 
 
@@ -228,7 +227,7 @@ def gamingpost():
 @app.route('/animals')
 def animals():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category = 'animals').paginate(page=page, per_page=7)
+    posts = Post.query.filter_by(category='Academic').order_by(Post.date_posted.desc()).paginate(page=page, per_page=7)
     return  render_template('home.html' , posts = posts)
 
 
