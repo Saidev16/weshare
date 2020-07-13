@@ -9,9 +9,9 @@
         <div class="media-body">
             <h2 class="account-heading">{{ user.username }}</h2>
             <p class="text-secondary">{{ user.email }}</p>
+            <p>({{ posts.total }} posts)</p>
         </div>  
 </div>
-<!-- <h1 class="user-post-title">Posts by {{ user.username }} ({{ posts.total }})</h1> -->
     {% for post in posts.items %}
         <article class="blog-post-info">
             <img src="{{ url_for('static' , filename='profil_pics/'+ post.author.image_file) }}" alt="user image" class="author-post-img">
