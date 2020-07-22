@@ -978,3 +978,56 @@ html , body{
     box-shadow: 0 6px 14px 0 #666;
     transform: scale(1.05);
  }
+
+ .about-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    background: url('pic.jpg') no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 0 0;
+ }
+ 
+ .inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+    padding-top: 0;
+ }
+ 
+ .inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px ;
+    font-weight: 900;
+ 
+ }
+ 
+ .text{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px ;
+    text-align: justify;
+    margin-bottom: 40px ;
+ }
+ 
+ .skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+ }
+ @media screen and (max-width:10 00px){
+    .about-section{
+       background-size: 100%;
+       padding: 100px 40px;
+    }
+ 
+    .inner-container{
+       width: 100%;
+    }
+ }
