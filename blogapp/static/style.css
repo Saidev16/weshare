@@ -348,7 +348,7 @@ header{
 
 .user-info{
     margin: 10px;
-    width: 700px;
+    width: 750px;
     height: 400px;
     background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -939,6 +939,20 @@ html , body{
     padding-bottom: 40px;
 }
 
+.blog-post-info{
+    width: 300px;
+}
+
+.fab{
+    width: 30px;
+    height: 30px;
+}
+
+.nav h4 {
+    margin-left: 0px;
+}
+
+}
 /* ADD BUTTON */
 
  
