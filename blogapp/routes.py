@@ -142,7 +142,7 @@ def academicpost():
 @app.route('/technology')
 def technology():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.filter_by(category='technlogy').order_by(Post.date_posted.desc()).paginate(page=page, per_page=7)
+    posts = Post.query.filter_by(category='technology').order_by(Post.date_posted.desc()).paginate(page=page, per_page=7)
     return  render_template('categories/technology.html' , posts = posts)
 
 
@@ -272,6 +272,7 @@ def update_post(post_id):
     if form.validate_on_submit():
         post.title = form.title.data
         post.content = form.content.data
+        post.category = form.category.data
         db.session.commit()
         flash('Your Post has been updated' , 'success')
         return redirect(url_for('post', post_id=post.id))
