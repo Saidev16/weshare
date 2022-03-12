@@ -48,7 +48,7 @@ MarkupSafe==1.1.1
 marshmallow==3.6.1
 mccabe==0.6.1
 mistune==0.8.4
-Pillow==7.1.2
+Pillow==9.0.1
 protobuf==3.12.2
 py-moneyed==0.8.0
 pyasn1==0.4.8
